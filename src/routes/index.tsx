@@ -2,7 +2,7 @@ import { type ParentComponent } from "solid-js";
 import { A, Title, useRouteData } from "solid-start";
 import { createServerData$ } from "solid-start/server";
 import { authOpts } from "./api/auth/[...solidauth]";
-import { getSession } from "@auth/solid-start";
+import { getSession } from "@solid-auth/next";
 
 export const routeData = () => {
   return createServerData$(
@@ -29,7 +29,7 @@ const Home: ParentComponent = () => {
           </A>{" "}
           with{" "}
           <A
-            href="https://authjs.dev/reference/solid-start/modules/main"
+            href="https://authjs.dev/reference/solidstart"
             class="text-blue-500 underline font-bold"
           >
             SolidStart Auth
